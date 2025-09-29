@@ -11,13 +11,15 @@
 
 **Enterprise-ready Laravel solution with role-based access control and modern UI**
 
+*Built with ❤️ using Laravel and SB Admin 2*
+
 [Quick Start](#-quick-start) • [Features](#-features) • [Documentation](#-documentation)
 
 </div>
 
 ## 📖 Overview
 
-Laravel SBAdmin2 Pro is a professional administration dashboard built on the Laravel framework, integrated with the SB Admin 2 Bootstrap theme. It provides robust role-based access control, separate admin and user dashboards, and a modern, responsive interface suitable for enterprise applications.
+Laravel SBAdmin2 Pro is a sophisticated administration dashboard built on the Laravel framework, featuring the professional SB Admin 2 Bootstrap theme. This enterprise-grade solution provides robust role-based access control, separate admin and user dashboards, and a modern, responsive interface suitable for business applications.
 
 ## ✨ Features
 
@@ -89,33 +91,6 @@ Laravel SBAdmin2 Pro is a professional administration dashboard built on the Lar
 
 > ⚠️ **Security Notice**: Change these credentials immediately after first login in production environments.
 
-## ⚙️ Configuration
-
-### Environment Setup
-
-Update your `.env` file for production:
-
-```env
-APP_NAME="Laravel SBAdmin2 Pro"
-APP_ENV=production
-APP_DEBUG=false
-APP_KEY=base64:your-generated-key
-APP_URL=https://your-domain.com
-APP_TIMEZONE=UTC
-
-# Database Configuration
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=your_database
-DB_USERNAME=your_username
-DB_PASSWORD=your_secure_password
-
-# Session Configuration
-SESSION_DRIVER=database
-SESSION_LIFETIME=120
-```
-
 ## 📁 Project Structure
 
 ```
@@ -162,6 +137,33 @@ Laravel-SBAdmin2-Pro/
 3. **Role Detection** - System automatically directs users to appropriate dashboard
 4. **Access Control** - Middleware enforces role-based permissions on all routes
 
+## ⚙️ Configuration
+
+### Environment Setup
+
+Update your `.env` file for production:
+
+```env
+APP_NAME="Laravel SBAdmin2 Pro"
+APP_ENV=production
+APP_DEBUG=false
+APP_KEY=base64:your-generated-key
+APP_URL=https://your-domain.com
+APP_TIMEZONE=UTC
+
+# Database Configuration
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database
+DB_USERNAME=your_username
+DB_PASSWORD=your_secure_password
+
+# Session Configuration
+SESSION_DRIVER=database
+SESSION_LIFETIME=120
+```
+
 ## 📦 Deployment
 
 ### Production Optimization
@@ -203,16 +205,6 @@ php artisan event:cache
 ./vendor/bin/phpunit --group=admin
 ```
 
-### Test Coverage
-
-The application includes comprehensive test coverage for:
-
-- Authentication functionality
-- Role-based access control
-- Middleware protection
-- Dashboard accessibility
-- User registration and login
-
 ## 🔒 Security Features
 
 ### Built-in Protection
@@ -252,7 +244,7 @@ The application includes comprehensive test coverage for:
 
 ## 🤝 Contributing
 
-We welcome contributions from the community! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+We welcome contributions from the community! 
 
 ### Development Workflow
 
@@ -282,18 +274,12 @@ We welcome contributions from the community! Please see our [Contributing Guidel
 For technical support and issue reporting:
 
 1. **Review Documentation** - Check this README and inline code comments
-2. **Search Issues** - Look for existing solutions in [GitHub Issues](https://github.com/kevindoni/Laravel-SBAdmin2-Pro/issues)
+2. **Search Issues** - Look for existing solutions in GitHub Issues
 3. **Create New Issue** - Provide detailed information including:
    - Environment specifications (PHP version, Laravel version)
    - Error messages and logs
    - Steps to reproduce the issue
    - Expected vs. actual behavior
-
-### Community Resources
-
-- [Laravel Community Forums](https://laravel.io/forum)
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/laravel)
-- [Laravel News](https://laravel-news.com)
 
 ## 📄 License
 
@@ -310,12 +296,13 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 <div align="center">
 
-## 🚀 Ready to Get Started?
+## 📊 Project Stats
 
-[View Demo](https://demo.example.com) • [Report Issue](https://github.com/kevindoni/Laravel-SBAdmin2-Pro/issues) • [Request Feature](https://github.com/kevindoni/Laravel-SBAdmin2-Pro/issues)
+![Stars](https://img.shields.io/github/stars/kevindoni/Laravel-SBAdmin2-Pro?style=social)
+![Forks](https://img.shields.io/github/forks/kevindoni/Laravel-SBAdmin2-Pro?style=social)
+![Issues](https://img.shields.io/github/issues/kevindoni/Laravel-SBAdmin2-Pro)
+![Last Commit](https://img.shields.io/github/last-commit/kevindoni/Laravel-SBAdmin2-Pro)
 
-**Built with ❤️ using Laravel and SB Admin 2**
-
-*Professional administration solutions for modern web applications*
+**Professional administration solutions for modern web applications**
 
 </div>
