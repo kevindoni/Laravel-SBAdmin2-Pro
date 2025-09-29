@@ -33,104 +33,12 @@ _A sophisticated Laravel administration panel featuring role-based access contro
 
 Follow these steps to set up the project locally:
 
-```bash
+````bash
 git clone https://github.com/kevindoni/Laravel-SBAdmin2-Pro.git
 cd Laravel-SBAdmin2-Pro
 composer install
 cp .env.example .env
 php artisan key:generate
-touch database/database.sqlite
-php artisan migrate
-php artisan db:seed --class=AdminSeeder
-php artisan serve
-```
-
-Access the app at http://127.0.0.1:8000
-
-## 🎯 Overview
-
-Laravel SBAdmin2 Pro is a professional-grade administration dashboard built on the Laravel framework, integrated with the SB Admin 2 Bootstrap theme. This solution provides a robust foundation for enterprise applications requiring multi-tier user management and sophisticated administrative capabilities.
-
-### Key Benefits
-
--   **Role-Based Access Control**: Secure separation between administrative and standard user functions
--   **Modern UI/UX**: Professional interface built with SB Admin 2 components
-
-## 🔒 Security
-
-### Security Features
-
--   **Cross-Site Request Forgery (CSRF) Protection**
--   **SQL Injection Prevention** through Laravel Eloquent ORM
--   **XSS Protection** via Blade template engine
--   **Secure Password Hashing** using bcrypt
--   **Session Security** with configurable timeouts
-
-### Security Best Practices
-
-1. **Credential Management**
-
-    - Change default administrator credentials immediately
-    - Implement strong password policies
-    - Regular credential rotation
-
-2. **Environment Security**
-
-    - Restrict `.env` file access
-    - Secure database credentials
-    - Regular security updates
-
-3. **Access Control**
-    - Principle of least privilege
-    - Regular access reviews
-    - Session management
-
-## 📞 Support
-
-### Documentation Resources
-
--   [Laravel Documentation](https://laravel.com/docs)
--   [SB Admin 2 Documentation](https://startbootstrap.com/theme/sb-admin-2)
--   [PHP Documentation](https://www.php.net/docs.php)
-
-### Issue Resolution
-
-For technical support and issue reporting:
-
-1. **Review Documentation**: Consult this README and inline code documentation
-2. **Search Issues**: Check existing GitHub issues for similar problems
-3. **Create Issue**: Provide detailed information including:
-    - Environment specifications
-    - Error messages and logs
-    - Steps to reproduce
-    - Expected vs. actual behavior
-
-### Community Resources
-
--   [Laravel Community Forums](https://laravel.io/forum)
--   [Stack Overflow](https://stackoverflow.com/questions/tagged/laravel)
--   [Laravel News](https://laravel-news.com)
-
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for complete licensing details.
-
-## 🙏 Acknowledgments
-
--   [Laravel Framework](https://laravel.com) - The foundational PHP framework
--   [SB Admin 2](https://startbootstrap.com/theme/sb-admin-2) - Bootstrap admin template
--   [Bootstrap](https://getbootstrap.com) - Frontend component library
--   Project contributors and maintainers
-
----
-
-<div align="center">
-
-**Laravel SBAdmin2 Pro** - _Enterprise Administration Solution_
-
-_Built with precision for professional deployment_
-
-</div>
 # Laravel SBAdmin2 Pro
 
 <div align="center">
@@ -146,105 +54,104 @@ _A sophisticated Laravel administration panel featuring role-based access contro
 
 </div>
 
-## 📋 Table of Contents
+## Table of Contents
 
--   [Overview](#overview)
--   [Features](#features)
--   [Requirements](#requirements)
--   [Installation](#installation)
--   [Configuration](#configuration)
--   [Architecture](#architecture)
--   [Usage](#usage)
--   [Deployment](#deployment)
--   [API Documentation](#api-documentation)
--   [Testing](#testing)
--   [Security](#security)
--   [Support](#support)
--   [License](#license)
+- [Overview](#overview)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Architecture](#architecture)
+- [Usage](#usage)
+- [Deployment](#deployment)
+- [API Documentation](#api-documentation)
+- [Testing](#testing)
+- [Security](#security)
+- [Support](#support)
+- [License](#license)
 
-## 🎯 Overview
+## Overview
 
 Laravel SBAdmin2 Pro is a professional-grade administration dashboard built on the Laravel framework, integrated with the SB Admin 2 Bootstrap theme. This solution provides a robust foundation for enterprise applications requiring multi-tier user management and sophisticated administrative capabilities.
 
-### Key Benefits
+## Features
 
--   **Role-Based Access Control**: Secure separation between administrative and standard user functions
--   **Modern UI/UX**: Professional interface built with SB Admin 2 components
-    \*\*\* End Patch
--   Dashboard accessibility
+- Role-based access control (admin / user)
+- SB Admin 2 Bootstrap UI
+- Blade templates and Laravel conventions
+- Migrations and seeders for quick setup
 
-## 🔒 Security
+## Requirements
 
-### Security Features
+- PHP 8.1+
+- Composer 2+
+- SQLite (development) or MySQL/PostgreSQL (production)
 
--   **Cross-Site Request Forgery (CSRF) Protection**
--   **SQL Injection Prevention** through Laravel Eloquent ORM
--   **XSS Protection** via Blade template engine
--   **Secure Password Hashing** using bcrypt
--   **Session Security** with configurable timeouts
+## Installation
 
-### Security Best Practices
+Follow these steps to set up the project locally:
 
-1. **Credential Management**
+```bash
+git clone https://github.com/kevindoni/Laravel-SBAdmin2-Pro.git
+cd Laravel-SBAdmin2-Pro
+composer install
+cp .env.example .env
+php artisan key:generate
+touch database/database.sqlite
+php artisan migrate
+php artisan db:seed --class=AdminSeeder
+php artisan serve
+````
 
-    - Change default administrator credentials immediately
-    - Implement strong password policies
-    - Regular credential rotation
+Access the app at http://127.0.0.1:8000
 
-2. **Environment Security**
+## Configuration
 
-    - Restrict `.env` file access
-    - Secure database credentials
-    - Regular security updates
+Edit the `.env` file for database and application settings. For production, switch to MySQL/PostgreSQL and secure your credentials.
 
-3. **Access Control**
-    - Principle of least privilege
-    - Regular access reviews
-    - Session management
+## Architecture
 
-## 📞 Support
+Standard Laravel layout: `app/`, `config/`, `database/`, `public/`, `resources/`, `routes/`, `storage/`.
 
-### Documentation Resources
+## Usage
 
--   [Laravel Documentation](https://laravel.com/docs)
--   [SB Admin 2 Documentation](https://startbootstrap.com/theme/sb-admin-2)
--   [PHP Documentation](https://www.php.net/docs.php)
+-   Admin dashboard: `/admin/dashboard` (admin only)
+-   User dashboard: `/user/dashboard` (authenticated users)
 
-### Issue Resolution
+## Deployment
 
-For technical support and issue reporting:
+Use `php artisan config:cache`, `php artisan route:cache`, and `composer install --optimize-autoloader --no-dev` for production deployments.
 
-1. **Review Documentation**: Consult this README and inline code documentation
-2. **Search Issues**: Check existing GitHub issues for similar problems
-3. **Create Issue**: Provide detailed information including:
-    - Environment specifications
-    - Error messages and logs
-    - Steps to reproduce
-    - Expected vs. actual behavior
+## API Documentation
 
-### Community Resources
+-   `POST /login` — authenticate
+-   `POST /register` — create account
+-   `POST /logout` — logout
+-   `GET /admin/dashboard` — admin dashboard
+-   `GET /user/dashboard` — user dashboard
 
--   [Laravel Community Forums](https://laravel.io/forum)
--   [Stack Overflow](https://stackoverflow.com/questions/tagged/laravel)
--   [Laravel News](https://laravel-news.com)
+## Testing
 
-## 📄 License
+Run the PHPUnit test suite with:
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for complete licensing details.
+```bash
+./vendor/bin/phpunit
+```
 
-## 🙏 Acknowledgments
+## Security
 
--   [Laravel Framework](https://laravel.com) - The foundational PHP framework
--   [SB Admin 2](https://startbootstrap.com/theme/sb-admin-2) - Bootstrap admin template
--   [Bootstrap](https://getbootstrap.com) - Frontend component library
--   Project contributors and maintainers
+-   CSRF protection, secure password hashing, XSS protection via Blade templates.
+
+## Support
+
+Open issues on GitHub and include environment details and reproduction steps.
+
+## License
+
+MIT — see the `LICENSE` file.
 
 ---
 
-<div align="center">
+If you'd like, I can also add explicit links to `CONTRIBUTING.md` and `CODE_OF_CONDUCT.md` near the bottom; let me know and I'll add them and push.
 
-**Laravel SBAdmin2 Pro** - _Enterprise Administration Solution_
-
-_Built with precision for professional deployment_
-
-</div>
+-   [Architecture](#architecture)
