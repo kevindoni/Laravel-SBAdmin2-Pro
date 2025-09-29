@@ -2,125 +2,184 @@
 
 <div align="center">
 
-![Laravel](https://img.shields.io/badge/Laravel-10.x-FF2D20?style=flat-square&logo=laravel)
-![PHP](https://img.shields.io/badge/PHP-8.1+-777BB4?style=flat-square&logo=php)
-![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
-![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?style=flat-square&logo=sqlite)
+![Laravel](https://img.shields.io/badge/Laravel-10.x-FF2D20?style=for-the-badge&logo=laravel)
+![PHP](https://img.shields.io/badge/PHP-8.1+-777BB4?style=for-the-badge&logo=php)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?style=for-the-badge&logo=sqlite)
 
-**Enterprise-Grade Admin Dashboard Solution**
+## Enterprise-Grade Administration Dashboard
 
-_A sophisticated Laravel administration panel featuring role-based access control and modern UI components_
+**Professional Laravel solution with role-based access control and modern UI components**
+
+[Installation](#-installation) • [Demo](#-demo) • [Documentation](#-documentation)
 
 </div>
 
+## ✨ Features
 
-## Overview
+### 🔐 Security & Authentication
+- **Multi-role Authentication System** (Admin/User)
+- **Role-based Middleware Protection**
+- **CSRF & XSS Protection**
+- **Secure Session Management**
 
-Laravel SBAdmin2 Pro is an admin dashboard built on Laravel with the SB Admin 2 Bootstrap theme. It provides role-based access control and a set of admin/user dashboards.
+### 🎨 User Interface
+- **SB Admin 2 Template** - Professional Bootstrap theme
+- **Fully Responsive Design** - Mobile-first approach
+- **Separate Dashboards** - Tailored experiences per role
+- **Modern UI Components** - Cards, charts, and widgets
 
-## Features
+### ⚡ Performance
+- **Optimized Laravel Structure**
+- **Efficient Database Queries**
+- **Caching Ready**
+- **Asset Optimization**
 
--   Multi-role authentication (admin / user)
--   SB Admin 2 Bootstrap UI
--   Blade templates
--   Migrations & seeders for quick setup
+## 🚀 Quick Start
 
-## Installation
+### Prerequisites
 
-```bash
-git clone https://github.com/kevindoni/Laravel-SBAdmin2-Pro.git
-cd Laravel-SBAdmin2-Pro
-composer install
-cp .env.example .env
-php artisan key:generate
-touch database/database.sqlite
-php artisan migrate --seed
-php artisan serve
-```
+- **PHP 8.1+** with extensions: BCMath, Ctype, JSON, Mbstring, OpenSSL, PDO, Tokenizer, XML
+- **Composer 2.0+**
+- **SQLite3** (development) or **MySQL 5.7+** / **PostgreSQL 9.5+** (production)
 
-Open http://127.0.0.1:8000
+### Installation
 
-## Configuration
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/kevindoni/Laravel-SBAdmin2-Pro.git
+   cd Laravel-SBAdmin2-Pro
+   ```
 
-Edit `.env` to configure database and environment settings.
+2. **Install dependencies**
+   ```bash
+   composer install --no-dev --optimize-autoloader
+   ```
 
-## Project Structure
+3. **Configure environment**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-Standard Laravel layout: `app/`, `config/`, `database/`, `public/`, `resources/`, `routes/`, `storage/`.
+4. **Setup database**
+   ```bash
+   touch database/database.sqlite
+   php artisan migrate --force
+   php artisan db:seed --class=AdminSeeder
+   ```
 
-## Usage
+5. **Launch application**
+   ```bash
+   php artisan serve
+   ```
+   Visit: `http://localhost:8000`
 
--   Admin dashboard: `/admin/dashboard` (admin only)
--   User dashboard: `/user/dashboard` (authenticated users)
+### Default Admin Account
+- **Email**: `admin@example.com`
+- **Password**: `password`
 
-## Testing
+> ⚠️ **Security Notice**: Change these credentials immediately after first login.
 
-Run tests with:
-
-```bash
-./vendor/bin/phpunit
-```
-
-## Contributing
-
-See `CONTRIBUTING.md` for contribution guidelines.
-
-## License
-
-MIT — see `LICENSE`.
-
-Administrators can access the administrative dashboard through the following endpoint:
-
-```
-/admin/dashboard
-```
-
-**Administrative Privileges Include:**
-
--   Full system access
--   User management capabilities
--   System configuration
--   Administrative reporting
-
-### Standard User Access
-
-Standard users are directed to the user dashboard:
+## 📁 Project Structure
 
 ```
-/user/dashboard
+app/
+├── Http/
+│   ├── Controllers/
+│   │   └── Auth/          # Authentication controllers
+│   └── Middleware/
+│       └── AdminMiddleware.php
+├── Models/
+│   └── User.php           # User model with admin flag
+database/
+├── migrations/            # Database schema
+└── seeders/
+    └── AdminSeeder.php    # Default admin user
+resources/
+└── views/
+    ├── admin/             # Admin-specific views
+    ├── user/              # User-specific views
+    ├── auth/              # Authentication views
+    └── layouts/           # Reusable templates
+public/template/           # SB Admin 2 assets
 ```
 
-**Standard User Features:**
+## ⚙️ Configuration
 
--   Basic application functionality
--   Role-appropriate feature access
--   Personal account management
+### Environment Setup
 
-### Authentication Workflow
-
-1. **Registration**: New users create accounts through the registration interface
-2. **Authentication**: Users authenticate using email and password credentials
-3. **Role-Based Routing**: System directs users to appropriate dashboards based on role
-4. **Access Control**: Middleware enforces role-based permissions
-
-## 🚀 Deployment
-
-### Production Environment Setup
-
-#### Database Configuration
-
-For production deployments, transition to a robust database solution:
+Update your `.env` file:
 
 ```env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=production_database
-DB_USERNAME=secure_username
-DB_PASSWORD=complex_password
+APP_NAME="Laravel SBAdmin2 Pro"
+APP_ENV=local
+APP_DEBUG=true
+APP_KEY=base64:...
+APP_URL=http://localhost:8000
+APP_TIMEZONE=Asia/Jakarta
+
+DB_CONNECTION=sqlite
+# DB_CONNECTION=mysql
+# DB_HOST=127.0.0.1
+# DB_PORT=3306
+# DB_DATABASE=homestead
+# DB_USERNAME=homestead
+# DB_PASSWORD=secret
+
+SESSION_DRIVER=file
+SESSION_LIFETIME=120
 ```
 
-#### Performance Optimization
+## 🎯 Usage
+
+### Dashboard Access
+
+| Role | Dashboard URL | Access Level |
+|------|---------------|--------------|
+| **Admin** | `/admin/dashboard` | Full system access |
+| **User** | `/user/dashboard` | Limited features |
+
+### Authentication Flow
+
+1. **Registration** - New users register through the sign-up form
+2. **Login** - Users authenticate with email and password
+3. **Role Detection** - System redirects to appropriate dashboard
+4. **Access Control** - Middleware protects routes based on role
+
+## 🛠 Development
+
+### Adding New Features
+
+1. **Create Controller**
+   ```bash
+   php artisan make:controller Admin/NewFeatureController
+   ```
+
+2. **Define Routes** in `routes/web.php`
+   ```php
+   Route::get('/admin/new-feature', [NewFeatureController::class, 'index'])
+        ->middleware(['auth', 'admin']);
+   ```
+
+3. **Create Views** in `resources/views/admin/`
+
+### Database Management
+
+```bash
+# Create migration
+php artisan make:migration create_feature_table
+
+# Run migrations
+php artisan migrate
+
+# Rollback
+php artisan migrate:rollback
+```
+
+## 📦 Production Deployment
+
+### Optimization
 
 ```bash
 # Cache configuration
@@ -163,80 +222,51 @@ SESSION_DRIVER=database
 ./vendor/bin/phpunit --coverage-html coverage/
 ```
 
-### Test Coverage
+## 🔒 Security Features
 
-The application includes comprehensive test coverage for:
+- **CSRF Protection** - Built-in Laravel security
+- **XSS Prevention** - Blade template escaping
+- **SQL Injection Protection** - Eloquent ORM
+- **Password Hashing** - Bcrypt algorithm
+- **Session Security** - Configurable timeouts
 
--   Authentication functionality
--   Role-based access control
--   Middleware protection
--   Dashboard accessibility
+## 📚 Documentation
 
-## 🔒 Security
+### API Endpoints
 
-### Security Features
+| Method | Endpoint | Description | Access |
+|--------|----------|-------------|--------|
+| `POST` | `/login` | User authentication | Public |
+| `POST` | `/register` | New user registration | Public |
+| `POST` | `/logout` | Session termination | Authenticated |
+| `GET` | `/admin/dashboard` | Admin dashboard | Admin only |
+| `GET` | `/user/dashboard` | User dashboard | Authenticated |
 
--   **Cross-Site Request Forgery (CSRF) Protection**
--   **SQL Injection Prevention** through Laravel Eloquent ORM
--   **XSS Protection** via Blade template engine
--   **Secure Password Hashing** using bcrypt
--   **Session Security** with configurable timeouts
+## 🤝 Contributing
 
-### Security Best Practices
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
-1. **Credential Management**
-
-    - Change default administrator credentials immediately
-    - Implement strong password policies
-    - Regular credential rotation
-
-2. **Environment Security**
-
-    - Restrict `.env` file access
-    - Secure database credentials
-    - Regular security updates
-
-3. **Access Control**
-    - Principle of least privilege
-    - Regular access reviews
-    - Session management
-
-## 📞 Support
-
-### Documentation Resources
-
--   [Laravel Documentation](https://laravel.com/docs)
--   [SB Admin 2 Documentation](https://startbootstrap.com/theme/sb-admin-2)
--   [PHP Documentation](https://www.php.net/docs.php)
-
-### Issue Resolution
-
-For technical support and issue reporting:
-
-1. **Review Documentation**: Consult this README and inline code documentation
-2. **Search Issues**: Check existing GitHub issues for similar problems
-3. **Create Issue**: Provide detailed information including:
-    - Environment specifications
-    - Error messages and logs
-    - Steps to reproduce
-    - Expected vs. actual behavior
-
-### Community Resources
-
--   [Laravel Community Forums](https://laravel.io/forum)
--   [Stack Overflow](https://stackoverflow.com/questions/tagged/laravel)
--   [Laravel News](https://laravel-news.com)
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## 📄 License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for complete licensing details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support
+
+- **Documentation**: [Laravel Docs](https://laravel.com/docs)
+- **Issues**: [GitHub Issues](https://github.com/kevindoni/Laravel-SBAdmin2-Pro/issues)
+- **Email**: Support team contact
 
 ## 🙏 Acknowledgments
 
--   [Laravel Framework](https://laravel.com) - The foundational PHP framework
--   [SB Admin 2](https://startbootstrap.com/theme/sb-admin-2) - Bootstrap admin template
--   [Bootstrap](https://getbootstrap.com) - Frontend component library
--   Project contributors and maintainers
+- [Laravel](https://laravel.com) - The fantastic PHP framework
+- [SB Admin 2](https://startbootstrap.com/theme/sb-admin-2) - Bootstrap admin theme
+- Contributors and community members
 
 ---
 
