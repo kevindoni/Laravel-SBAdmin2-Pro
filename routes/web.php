@@ -21,9 +21,11 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Dashboards
 Route::middleware('auth')->group(function () {
-    Route::get('/dashboard/user', [UserDashboardController::class, 'index'])->name('user.dashboard');
+    // User dashboard: /user/dashboard
+    Route::get('/user/dashboard', [UserDashboardController::class, 'index'])->name('user.dashboard');
 
+    // Admin dashboard: /admin/dashboard (protected by AdminMiddleware)
     Route::middleware([AdminMiddleware::class])->group(function () {
-        Route::get('/dashboard/admin', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
+        Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
     });
 });
