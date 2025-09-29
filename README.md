@@ -13,18 +13,6 @@ _A sophisticated Laravel administration panel featuring role-based access contro
 
 </div>
 
-## 📋 Table of Contents
-
-# Laravel SBAdmin2 Pro
-
-<div align="center">
-
-![Laravel](https://img.shields.io/badge/Laravel-10.x-FF2D20?style=flat-square&logo=laravel)
-![PHP](https://img.shields.io/badge/PHP-8.1+-777BB4?style=flat-square&logo=php)
-![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
-![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?style=flat-square&logo=sqlite)
-
-</div>
 
 ## Overview
 
