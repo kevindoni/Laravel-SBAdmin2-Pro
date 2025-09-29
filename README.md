@@ -99,3 +99,4 @@ Kalau Anda mau, saya bisa:
 - Atau mengekstrak partials (header/footer/sidebar) dari template menjadi Blade partials.
 
 Tolong beri tahu langkah pembersihan atau fitur lanjutan mana yang ingin saya kerjakan selanjutnya.
+# Laravel-SBAdmin2-Pro  
