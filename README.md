@@ -29,6 +29,24 @@ _A sophisticated Laravel administration panel featuring role-based access contro
 -   [Support](#support)
 -   [License](#license)
 
+## 🚀 Installation
+
+Follow these steps to set up the project locally:
+
+```bash
+git clone https://github.com/kevindoni/Laravel-SBAdmin2-Pro.git
+cd Laravel-SBAdmin2-Pro
+composer install
+cp .env.example .env
+php artisan key:generate
+touch database/database.sqlite
+php artisan migrate
+php artisan db:seed --class=AdminSeeder
+php artisan serve
+```
+
+Access the app at http://127.0.0.1:8000
+
 ## 🎯 Overview
 
 Laravel SBAdmin2 Pro is a professional-grade administration dashboard built on the Laravel framework, integrated with the SB Admin 2 Bootstrap theme. This solution provides a robust foundation for enterprise applications requiring multi-tier user management and sophisticated administrative capabilities.
