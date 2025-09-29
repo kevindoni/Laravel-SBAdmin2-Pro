@@ -9,9 +9,7 @@
 
 ## Professional Administration Dashboard
 
-**Enterprise-ready Laravel solution with role-based access control and modern UI**
-
-*Built with ❤️ using Laravel and SB Admin 2*
+_Built with ❤️ using Laravel and SB Admin 2_
 
 [Quick Start](#-quick-start) • [Features](#-features) • [Documentation](#-documentation)
 
@@ -24,70 +22,79 @@ Laravel SBAdmin2 Pro is a sophisticated administration dashboard built on the La
 ## ✨ Features
 
 ### 🔐 Security & Authentication
-- **Multi-role Authentication System** (Admin/User)
-- **Role-based Middleware Protection**
-- **CSRF & XSS Protection**
-- **Secure Session Management**
-- **Password Hashing with Bcrypt**
+
+-   **Multi-role Authentication System** (Admin/User)
+-   **Role-based Middleware Protection**
+-   **CSRF & XSS Protection**
+-   **Secure Session Management**
+-   **Password Hashing with Bcrypt**
 
 ### 🎨 User Experience
-- **SB Admin 2 Template** - Professional Bootstrap admin theme
-- **Fully Responsive Design** - Mobile-first approach
-- **Separate Dashboards** - Tailored experiences for admin and users
-- **Modern UI Components** - Cards, charts, and widgets
-- **Blade Templating** - Clean and maintainable views
+
+-   **SB Admin 2 Template** - Professional Bootstrap admin theme
+-   **Fully Responsive Design** - Mobile-first approach
+-   **Separate Dashboards** - Tailored experiences for admin and users
+-   **Modern UI Components** - Cards, charts, and widgets
+-   **Blade Templating** - Clean and maintainable views
 
 ### ⚡ Performance & Architecture
-- **Optimized Laravel Structure** - Following best practices
-- **Efficient Database Queries** - Eloquent ORM implementation
-- **Migration System** - Version-controlled database schema
-- **Seeder Classes** - Easy setup with sample data
+
+-   **Optimized Laravel Structure** - Following best practices
+-   **Efficient Database Queries** - Eloquent ORM implementation
+-   **Migration System** - Version-controlled database schema
+-   **Seeder Classes** - Easy setup with sample data
 
 ## 🛠 Requirements
 
 ### System Requirements
-- **PHP 8.1+** with extensions: BCMath, Ctype, JSON, Mbstring, OpenSSL, PDO, Tokenizer, XML
-- **Composer 2.0+**
-- **SQLite3** (development) or **MySQL 5.7+** / **PostgreSQL 9.5+** (production)
-- **Web Server** (Apache/Nginx) or PHP built-in server for development
+
+-   **PHP 8.1+** with extensions: BCMath, Ctype, JSON, Mbstring, OpenSSL, PDO, Tokenizer, XML
+-   **Composer 2.0+**
+-   **SQLite3** (development) or **MySQL 5.7+** / **PostgreSQL 9.5+** (production)
+-   **Web Server** (Apache/Nginx) or PHP built-in server for development
 
 ## 🚀 Quick Start
 
 ### Installation Steps
 
 1. **Clone the repository**
-   ```bash
-   git clone https://github.com/kevindoni/Laravel-SBAdmin2-Pro.git
-   cd Laravel-SBAdmin2-Pro
-   ```
+
+    ```bash
+    git clone https://github.com/kevindoni/Laravel-SBAdmin2-Pro.git
+    cd Laravel-SBAdmin2-Pro
+    ```
 
 2. **Install PHP dependencies**
-   ```bash
-   composer install
-   ```
+
+    ```bash
+    composer install
+    ```
 
 3. **Configure environment**
-   ```bash
-   cp .env.example .env
-   php artisan key:generate
-   ```
+
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+    ```
 
 4. **Setup database**
-   ```bash
-   touch database/database.sqlite
-   php artisan migrate --force
-   php artisan db:seed --class=AdminSeeder
-   ```
+
+    ```bash
+    touch database/database.sqlite
+    php artisan migrate --force
+    php artisan db:seed --class=AdminSeeder
+    ```
 
 5. **Start development server**
-   ```bash
-   php artisan serve
-   ```
-   Access your application at: `http://localhost:8000`
+    ```bash
+    php artisan serve
+    ```
+    Access your application at: `http://localhost:8000`
 
 ### Default Admin Account
-- **Email**: `admin@example.com`
-- **Password**: `password`
+
+-   **Email**: `admin@example.com`
+-   **Password**: `password`
 
 > ⚠️ **Security Notice**: Change these credentials immediately after first login in production environments.
 
@@ -125,10 +132,18 @@ Laravel-SBAdmin2-Pro/
 
 ### Dashboard Access
 
+<<<<<<< HEAD
 | Role | Dashboard URL | Access Level | Features |
 |------|---------------|--------------|----------|
 | **Admin** | `/admin/dashboard` | Full system access | User management, system configuration, reports |
 | **User** | `/user/dashboard` | Limited access | Personal dashboard, profile management |
+=======
+| Role | Dashboard URL | Access Level | Features |
+| --------- | ------------------ | ------------------ | ---------------------------------------------- |
+| **Admin** | `/admin/dashboard` | Full system access | User management, system configuration, reports |
+| **User** | `/user/dashboard` | Limited access | Personal dashboard, profile management |
+
+> > > > > > > 1439154 (Guard Chart.js demo initializers against missing canvas elements; avoid Chart(null) TypeError)
 
 ### Authentication Workflow
 
@@ -183,11 +198,19 @@ php artisan event:cache
 
 ### Security Hardening
 
-- Set `APP_DEBUG=false` in production
-- Use `SESSION_DRIVER=database` for better security
-- Implement SSL/HTTPS
-- Regular security updates
-- Strong database credentials
+<<<<<<< HEAD
+
+-   Set `APP_DEBUG=false` in production
+-   Use `SESSION_DRIVER=database` for better security
+-   Implement SSL/HTTPS
+-   Regular security updates
+-   # Strong database credentials
+-   Set `APP_DEBUG=false` in production
+-   Use `SESSION_DRIVER=database` for better security
+-   Implement SSL/HTTPS
+-   Regular security updates
+-   Strong database credentials
+    > > > > > > > 1439154 (Guard Chart.js demo initializers against missing canvas elements; avoid Chart(null) TypeError)
 
 ## 🧪 Testing
 
@@ -209,42 +232,73 @@ php artisan event:cache
 
 ### Built-in Protection
 
-- **CSRF Protection** - Automatic token validation
-- **XSS Prevention** - Blade template escaping
-- **SQL Injection Protection** - Eloquent ORM parameter binding
-- **Secure Password Hashing** - Bcrypt algorithm
-- **Session Security** - Configurable timeouts and encryption
+<<<<<<< HEAD
+
+-   **CSRF Protection** - Automatic token validation
+-   **XSS Prevention** - Blade template escaping
+-   **SQL Injection Protection** - Eloquent ORM parameter binding
+-   **Secure Password Hashing** - Bcrypt algorithm
+-   # **Session Security** - Configurable timeouts and encryption
+-   **CSRF Protection** - Automatic token validation
+-   **XSS Prevention** - Blade template escaping
+-   **SQL Injection Protection** - Eloquent ORM parameter binding
+-   **Secure Password Hashing** - Bcrypt algorithm
+-   **Session Security** - Configurable timeouts and encryption
+    > > > > > > > 1439154 (Guard Chart.js demo initializers against missing canvas elements; avoid Chart(null) TypeError)
 
 ### Security Best Practices
 
 1. **Credential Management**
-   - Change default administrator credentials immediately
-   - Implement strong password policies
-   - Regular credential rotation
+
+    - Change default administrator credentials immediately
+    - Implement strong password policies
+    - Regular credential rotation
 
 2. **Environment Security**
-   - Restrict `.env` file access
-   - Secure database credentials
-   - Regular security updates
+
+    - Restrict `.env` file access
+    - Secure database credentials
+    - Regular security updates
 
 3. **Access Control**
-   - Principle of least privilege
-   - Regular access reviews
-   - Secure session management
+   <<<<<<< HEAD
+    - Principle of least privilege
+    - Regular access reviews
+    - Secure session management
 
 ## 🔌 API Endpoints
 
-| Method | Endpoint | Description | Access |
-|--------|----------|-------------|--------|
-| `POST` | `/login` | User authentication | Public |
-| `POST` | `/register` | New user registration | Public |
-| `POST` | `/logout` | Session termination | Authenticated |
-| `GET` | `/admin/dashboard` | Admin dashboard | Admin only |
-| `GET` | `/user/dashboard` | User dashboard | Authenticated |
+| Method | Endpoint           | Description           | Access        |
+| ------ | ------------------ | --------------------- | ------------- |
+| `POST` | `/login`           | User authentication   | Public        |
+| `POST` | `/register`        | New user registration | Public        |
+| `POST` | `/logout`          | Session termination   | Authenticated |
+| `GET`  | `/admin/dashboard` | Admin dashboard       | Admin only    |
+| `GET`  | `/user/dashboard`  | User dashboard        | Authenticated |
 
 ## 🤝 Contributing
 
-We welcome contributions from the community! 
+# We welcome contributions from the community!
+
+    - Principle of least privilege
+    - Regular access reviews
+    - Secure session management
+
+## 🔌 API Endpoints
+
+| Method | Endpoint           | Description           | Access        |
+| ------ | ------------------ | --------------------- | ------------- |
+| `POST` | `/login`           | User authentication   | Public        |
+| `POST` | `/register`        | New user registration | Public        |
+| `POST` | `/logout`          | Session termination   | Authenticated |
+| `GET`  | `/admin/dashboard` | Admin dashboard       | Admin only    |
+| `GET`  | `/user/dashboard`  | User dashboard        | Authenticated |
+
+## 🤝 Contributing
+
+We welcome contributions from the community!
+
+> > > > > > > 1439154 (Guard Chart.js demo initializers against missing canvas elements; avoid Chart(null) TypeError)
 
 ### Development Workflow
 
@@ -256,18 +310,31 @@ We welcome contributions from the community!
 
 ### Code Standards
 
-- Follow PSR-12 coding standards
-- Write clear commit messages
-- Add tests for new features
-- Update documentation accordingly
+<<<<<<< HEAD
+
+-   Follow PSR-12 coding standards
+-   Write clear commit messages
+-   Add tests for new features
+-   # Update documentation accordingly
+-   Follow PSR-12 coding standards
+-   Write clear commit messages
+-   Add tests for new features
+-   Update documentation accordingly
+    > > > > > > > 1439154 (Guard Chart.js demo initializers against missing canvas elements; avoid Chart(null) TypeError)
 
 ## 📞 Support
 
 ### Documentation Resources
 
-- [Laravel Documentation](https://laravel.com/docs)
-- [SB Admin 2 Documentation](https://startbootstrap.com/theme/sb-admin-2)
-- [Bootstrap Documentation](https://getbootstrap.com/docs)
+<<<<<<< HEAD
+
+-   [Laravel Documentation](https://laravel.com/docs)
+-   [SB Admin 2 Documentation](https://startbootstrap.com/theme/sb-admin-2)
+-   # [Bootstrap Documentation](https://getbootstrap.com/docs)
+-   [Laravel Documentation](https://laravel.com/docs)
+-   [SB Admin 2 Documentation](https://startbootstrap.com/theme/sb-admin-2)
+-   [Bootstrap Documentation](https://getbootstrap.com/docs)
+    > > > > > > > 1439154 (Guard Chart.js demo initializers against missing canvas elements; avoid Chart(null) TypeError)
 
 ### Issue Resolution
 
@@ -276,10 +343,16 @@ For technical support and issue reporting:
 1. **Review Documentation** - Check this README and inline code comments
 2. **Search Issues** - Look for existing solutions in GitHub Issues
 3. **Create New Issue** - Provide detailed information including:
-   - Environment specifications (PHP version, Laravel version)
-   - Error messages and logs
-   - Steps to reproduce the issue
-   - Expected vs. actual behavior
+   <<<<<<< HEAD
+    - Environment specifications (PHP version, Laravel version)
+    - Error messages and logs
+    - Steps to reproduce the issue
+    - # Expected vs. actual behavior
+    - Environment specifications (PHP version, Laravel version)
+    - Error messages and logs
+    - Steps to reproduce the issue
+    - Expected vs. actual behavior
+        > > > > > > > 1439154 (Guard Chart.js demo initializers against missing canvas elements; avoid Chart(null) TypeError)
 
 ## 📄 License
 
@@ -287,10 +360,17 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 🙏 Acknowledgments
 
-- [Laravel Framework](https://laravel.com) - The fantastic PHP framework that makes development enjoyable
-- [SB Admin 2](https://startbootstrap.com/theme/sb-admin-2) - Clean and professional Bootstrap admin theme
-- [Bootstrap](https://getbootstrap.com) - The world's most popular front-end component library
-- All contributors and community members who help improve this project
+<<<<<<< HEAD
+
+-   [Laravel Framework](https://laravel.com) - The fantastic PHP framework that makes development enjoyable
+-   [SB Admin 2](https://startbootstrap.com/theme/sb-admin-2) - Clean and professional Bootstrap admin theme
+-   [Bootstrap](https://getbootstrap.com) - The world's most popular front-end component library
+-   # All contributors and community members who help improve this project
+-   [Laravel Framework](https://laravel.com) - The fantastic PHP framework that makes development enjoyable
+-   [SB Admin 2](https://startbootstrap.com/theme/sb-admin-2) - Clean and professional Bootstrap admin theme
+-   [Bootstrap](https://getbootstrap.com) - The world's most popular front-end component library
+-   All contributors and community members who help improve this project
+    > > > > > > > 1439154 (Guard Chart.js demo initializers against missing canvas elements; avoid Chart(null) TypeError)
 
 ---
 
