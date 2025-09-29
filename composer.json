@@ -1,9 +1,26 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
+    "name": "kevindoni/laravel-sbadmin2-pro",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "Laravel SBAdmin2 Pro - admin dashboard built with Laravel and the SB Admin 2 Bootstrap theme.",
+    "keywords": [
+        "laravel",
+        "sb-admin-2",
+        "admin",
+        "dashboard"
+    ],
+    "homepage": "https://github.com/kevindoni/Laravel-SBAdmin2-Pro",
+    "support": {
+        "issues": "https://github.com/kevindoni/Laravel-SBAdmin2-Pro/issues",
+        "source": "https://github.com/kevindoni/Laravel-SBAdmin2-Pro"
+    },
+    "authors": [
+        {
+            "name": "Kevindoni",
+            "email": "kevindoni@example.com",
+            "homepage": "https://github.com/kevindoni"
+        }
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.2",
